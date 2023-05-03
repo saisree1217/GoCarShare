@@ -1,1 +1,103 @@
-<p>carlendee works!</p>
+<!-- Top navigation -->
+
+  
+  <!-- Sidebar navigation -->
+  <div class="container-fluid">
+	<div class="row">
+  
+	  <nav class="col-md-2 d-md-block bg-light sidebar">
+		<div class="sidebar-sticky">
+		  <ul class="nav flex-column">
+			<li class="nav-item">
+			  <a class="nav-link active">
+				<i class="fas fa-user"></i>User Profile
+			  </a>
+			</li>
+			<!-- Calling SignOut() Api from AuthService -->
+			<li class="nav-item">
+			  <a class="nav-link" >
+				<i class="fas fa-sign-out-alt"></i>Log out
+			  </a>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+		<div class="inner-adjust">
+  
+		  <div class="pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">User Profile</h1>
+		  </div>
+		  <!-- Show user data when logged in -->
+		  <div class="row" >
+			
+				<!-- <img class="align-self-start mr-5 img-thumbnail rounded-circle" > -->
+				<!-- <div class="media-body">
+				  <h1>Hello: </h1>
+				  <p>User ID: </p>
+				  <p>Email: </p>
+				 < <p>Email Verified: </p>
+				</div> -->
+			   
+			
+	  
+			</div>
+		  </div>
+	
+		  <div class="row">
+			<div class="container h-100">
+			  <div class="d-flex justify-content-center h-100">
+				<div id="map">
+                    <p>Radius:<input type="text" [(ngModel)]="radius" (ngModelChange)="onRadius($event)"></p>
+					<p style="cursor:pointer;" (click)="getLocation()">give location</p>
+					<p>Available From:</p>
+							<mat-form-field appearance="fill">
+								<mat-label>Choose a date</mat-label>
+								<input matInput [matDatepicker]="picker" [(ngModel)]="availableFrom" (ngModelChange)="onAvailableFrom($event)">
+								<mat-hint>MM/DD/YYYY</mat-hint>
+								<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							</mat-form-field>
+							<p>Time:<input type="time" [(ngModel)]="availableFromTime" (ngModelChange)="onAvailableFromTime($event)"></p>
+							<label>AM/PM:</label>
+							<select [(ngModel)]="selectedAmPmFrom">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+							
+							<p>Available Till:</p>
+							<mat-form-field appearance="fill">
+								<mat-label>Choose a date</mat-label>
+								<input matInput [matDatepicker]="picker" [(ngModel)]="availableTo" (ngModelChange)="onAvailableTo($event)">
+								<mat-hint>MM/DD/YYYY</mat-hint>
+								<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							</mat-form-field>
+							<p>Time:<input type="time" [(ngModel)]="availableToTime" (ngModelChange)="onAvailableToTime($event)"></p>
+							<label>AM/PM:</label>
+							<select [(ngModel)]="selectedAmPmTo">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+
+                            <p style="cursor: pointer;" (click)="findVehicles()">findVehicles</p>
+
+                           <!-- <google-map height="400px"
+                                        width="750px"
+                                        [center]="center"
+                                        [zoom]="zoom">
+                                        <map-rectangle [bounds]="bounds"></map-rectangle>
+                                    </google-map> -->
+                </div>
+			</div>
+		  </div>
+		
+  
+		</div>
+		
+	  </main>
+  
+	</div>
+  </div>
+  
+  

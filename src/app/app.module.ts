@@ -13,6 +13,16 @@ import { CarlenderComponent } from './carlender/carlender.component';
 import { CarlendeeComponent } from './carlendee/carlendee.component';
 import { CarDropdownComponent } from './car-dropdown/car-dropdown.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { DatePipe } from '@angular/common';
+import { AgmCoreModule } from '@agm/core';
+// import {GoogleMapsModule} from '@angular/google-maps'
+
+
 
 @NgModule({
   declarations: [
@@ -27,9 +37,25 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule
+    AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    AgmCoreModule.forRoot({
+        apiKey:"AIzaSyCYDEnYMAwEhI0dzkIgYZ6T10WMF5YQS4A"
+    }
+
+    ),
+    // GoogleMapsModule
+    
+    
+   
+   
   ],
-  providers: [ ApiserviceService ],
-  bootstrap: [AppComponent]
+  providers: [ ApiserviceService ,
+  DatePipe],
+  bootstrap: [AppComponent,
+              CarlenderComponent]
 })
 export class AppModule { }

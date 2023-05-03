@@ -19,11 +19,6 @@
 				<i class="fas fa-sign-out-alt"></i>Log out
 			  </a>
 			</li>
-			<li class="nav-item">
-			  <a class="nav-link" >
-				<i class="bi bi-car-front"></i>Registered Cars
-			  </a>
-			</li>
 		  </ul>
 		</div>
 	  </nav>
@@ -39,27 +34,53 @@
 				<div class="vehicle-list">
 				<div class="card vehicle-card"  *ngFor = "let vehicle of userVehicles;let i=index" >
 					<div class="card-body" >
-					  <h5 class="card-title">Registered vehicle</h5>
+					  <h2 class="card-title"><b>Registered vehicle</b></h2>
 					  <p class="card-text"> Vehicle Details</p>
 					   <p>Car sub-model: {{vehicle.bodyStyle}}</p>
 						<p>Color: {{vehicle.color}}</p>
 						<p>Registered on: {{vehicle.registeredOn}}</p>
 						<p>Car model: {{vehicle.make}}</p>
 						<p>year: {{vehicle.year}}</p>	
-						<p style="cursor: pointer;" (click)="host(i)">Host</p>		
+						<p style="cursor: pointer;" (click)="host(i)">Host</p>
+						<div *ngIf="isHostButtonClicked && i==selectedModelIndex">
+							<p>Listing Price</p>
+							<input type="text" [(ngModel)]="listingPrice" (ngModelChange)="onListingPrice($event)">
+							<p style="cursor:pointer;" (click)="getLocation()">give location</p>
+							<p>Available From:</p>
+							<mat-form-field appearance="fill">
+								<mat-label>Choose a date</mat-label>
+								<input matInput [matDatepicker]="picker" [(ngModel)]="availableFrom" (ngModelChange)="onAvailableFrom($event)">
+								<mat-hint>MM/DD/YYYY</mat-hint>
+								<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							</mat-form-field>
+							<p>Time:<input type="time" [(ngModel)]="availableFromTime" (ngModelChange)="onAvailableFromTime($event)"></p>
+							<label>AM/PM:</label>
+							<select [(ngModel)]="selectedAmPmFrom">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+							
+							<p>Available Till:</p>
+							<mat-form-field appearance="fill">
+								<mat-label>Choose a date</mat-label>
+								<input matInput [matDatepicker]="picker" [(ngModel)]="availableTo" (ngModelChange)="onAvailableTo($event)">
+								<mat-hint>MM/DD/YYYY</mat-hint>
+								<mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							</mat-form-field>
+							<p>Time:<input type="time" [(ngModel)]="availableToTime" (ngModelChange)="onAvailableToTime($event)"></p>
+							<label>AM/PM:</label>
+							<select [(ngModel)]="selectedAmPmTo">
+							  <option value="AM">AM</option>
+							  <option value="PM">PM</option>
+							</select>
+							<p style="cursor: pointer;" (click)="submitHost(i)">Submit</p>
+						</div>  		
 					  </div>
 				
 				  </div>
-				<!-- <div class="card" style="width: 18rem;">
-					<div class="card-body" *ngFor = "let vehicle of userVehicles;let i=index">
-					  <h5 class="card-title">Registered Vehicles</h5>
-					    <p>{{vehicle.body_style}}</p>
-						<p>{{vehicle.color}}</p>
-						<p>{{vehicle.make}}</p>
-						<p>{{vehicle.year}}</p>			
-						<p style="cursor: pointer;" (click)="host(i)">Host</p>
-					</div>
-				</div> -->
+			
 				<!-- <img class="align-self-start mr-5 img-thumbnail rounded-circle" > -->
 				<!-- <div class="media-body">
 				  <h1>Hello: </h1>

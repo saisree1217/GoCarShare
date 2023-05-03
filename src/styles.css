@@ -1,4 +1,7 @@
 @import 'https://use.fontawesome.com/releases/v5.5.0/css/all.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/cdk/overlay-prebuilt.css';
+
 
 * {
   -webkit-box-sizing: border-box;
@@ -664,3 +667,5 @@ body .table thead th {
     display: none;
   }
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
