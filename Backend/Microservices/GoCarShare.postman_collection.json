@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "200db2f9-f871-4ba9-a702-84ed3a8f7ac2",
+		"name": "GoCarShare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://authserver-z742wpzi3q-uc.a.run.app/auth/singUp?emailId=sample1232@gmail.com&password=12345678&displayName=RLC user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://authserver-z742wpzi3q-uc.a.run.app/auth/singUp?emailId=sample1232@gmail.com&password=12345678&displayName=RLC user",
+					"protocol": "https",
+					"host": [
+						"authserver-z742wpzi3q-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"auth",
+						"singUp"
+					],
+					"query": [
+						{
+							"key": "emailId",
+							"value": "sample1232@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						},
+						{
+							"key": "displayName",
+							"value": "RLC user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://authserver-z742wpzi3q-uc.a.run.app/auth/signIn?emailId=rlc@gmail.com&password=12345678",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://authserver-z742wpzi3q-uc.a.run.app/auth/signIn?emailId=rlc@gmail.com&password=12345678",
+					"protocol": "https",
+					"host": [
+						"authserver-z742wpzi3q-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"auth",
+						"signIn"
+					],
+					"query": [
+						{
+							"key": "emailId",
+							"value": "rlc@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://authserver-z742wpzi3q-uc.a.run.app/user/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUkxDIHVzZXIiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29jYXJzaGFyZSIsImF1ZCI6ImdvY2Fyc2hhcmUiLCJhdXRoX3RpbWUiOjE2ODA3MTI5ODIsInVzZXJfaWQiOiJLRWRzOUpDdTFXUzlCN2Y5OVBUSlU4UkRRWW8xIiwic3ViIjoiS0VkczlKQ3UxV1M5QjdmOTlQVEpVOFJEUVlvMSIsImlhdCI6MTY4MDcxMjk4MiwiZXhwIjoxNjgwNzE2NTgyLCJlbWFpbCI6InJsY0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJybGNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.oyyxZ9bKDPkdFc7HM-_9vw3peajjmUsC36fQZymQu7_Y9MhrG3Nnvrs6dR2zijovEBGb5tfDkSGqIzcK5Fz_DgBbPJl_YBetsCVDKOhnub6E5lP1m902jX95N1bUgaNfI5yb3Ko3equib9W6MpyxlcFvE45UBZAGZk1tacQnsd0fWFoER_qhvAgcDBTLAFSlOK3gbc1yEyw-y2S5PUTkh6vCs1PNH-pdNfxnnwOAAZIPZFN5TazTgzjGwNGA4HaezhMFGB9DfXTOoywEQtSwN_aHy7_AAXUybT5Wp_HXDlB-JRMHK0f5WyiLUscoZKm3IRHVv3BsrDor-prxIUV5xA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://authserver-z742wpzi3q-uc.a.run.app/user/",
+					"protocol": "https",
+					"host": [
+						"authserver-z742wpzi3q-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://authserver-z742wpzi3q-uc.a.run.app/search?q=2018 wagon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://authserver-z742wpzi3q-uc.a.run.app/search?q=2018 wagon",
+					"protocol": "https",
+					"host": [
+						"authserver-z742wpzi3q-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "2018 wagon"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://authserver-z742wpzi3q-uc.a.run.app/user/updateType?userType=LENDEE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUkxDIHVzZXIiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29jYXJzaGFyZSIsImF1ZCI6ImdvY2Fyc2hhcmUiLCJhdXRoX3RpbWUiOjE2ODA3MTI5ODIsInVzZXJfaWQiOiJLRWRzOUpDdTFXUzlCN2Y5OVBUSlU4UkRRWW8xIiwic3ViIjoiS0VkczlKQ3UxV1M5QjdmOTlQVEpVOFJEUVlvMSIsImlhdCI6MTY4MDcxMjk4MiwiZXhwIjoxNjgwNzE2NTgyLCJlbWFpbCI6InJsY0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJybGNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.oyyxZ9bKDPkdFc7HM-_9vw3peajjmUsC36fQZymQu7_Y9MhrG3Nnvrs6dR2zijovEBGb5tfDkSGqIzcK5Fz_DgBbPJl_YBetsCVDKOhnub6E5lP1m902jX95N1bUgaNfI5yb3Ko3equib9W6MpyxlcFvE45UBZAGZk1tacQnsd0fWFoER_qhvAgcDBTLAFSlOK3gbc1yEyw-y2S5PUTkh6vCs1PNH-pdNfxnnwOAAZIPZFN5TazTgzjGwNGA4HaezhMFGB9DfXTOoywEQtSwN_aHy7_AAXUybT5Wp_HXDlB-JRMHK0f5WyiLUscoZKm3IRHVv3BsrDor-prxIUV5xA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://authserver-z742wpzi3q-uc.a.run.app/user/updateType?userType=LENDEE",
+					"protocol": "https",
+					"host": [
+						"authserver-z742wpzi3q-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"user",
+						"updateType"
+					],
+					"query": [
+						{
+							"key": "userType",
+							"value": "LENDEE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://authserver-z742wpzi3q-uc.a.run.app/search?q=hyundai",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg3YzFlN2Y4MDAzNGJiYzgxYjhmMmRiODM3OTIxZjRiZDI4N2YxZGYiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiUkxDIHVzZXIiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZ29jYXJzaGFyZSIsImF1ZCI6ImdvY2Fyc2hhcmUiLCJhdXRoX3RpbWUiOjE2ODA3MjE0NTcsInVzZXJfaWQiOiJLRWRzOUpDdTFXUzlCN2Y5OVBUSlU4UkRRWW8xIiwic3ViIjoiS0VkczlKQ3UxV1M5QjdmOTlQVEpVOFJEUVlvMSIsImlhdCI6MTY4MDcyMTQ1NywiZXhwIjoxNjgwNzI1MDU3LCJlbWFpbCI6InJsY0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJybGNAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.SX6nsRu0bC4HY3QxSd0vtzcronKRo0OauZerufMlp6bMOvxH4AkYTLa0oidIir4T3TZm4dAiCG96AOAcTHlQ6sFcQlqOJkCCD2JYgSZHjBDFVkDoXjiaoamJckejjAYZhBFA9cpBBfCEjhulAQLzkiN8YyfTb0pa3Lm3DX-wXi1FQm6BfwBA7840dp6cwFSmOUwc-FRmIrIHlaCgS77CwE7DNgGZNHEdexvcuP9TOgg8-RD2stG8mIFQMltdBd8zbYwGFtnx1ehkJxu8p3AKh63IWznIBPZBUzwdZmQiuvn2TUTR8uHFpNlQyAxd6k_3u9-OOWTGE5h8o5CqpKcq9w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://authserver-z742wpzi3q-uc.a.run.app/search?q=hyundai",
+					"protocol": "https",
+					"host": [
+						"authserver-z742wpzi3q-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "hyundai"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://authserver-z742wpzi3q-uc.a.run.app/vehicle/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"make\": \"Mercedes-Benz\",\n    \"model\": \"E-Class\",\n    \"year\": 2019,\n    \"color\": \"Red\",\n    \"invetoryId\": \"7BAEF9B0-223E-00CA-F05B-E807A99AEE28\",\n    \"bodyStyle\": \"Sedan\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://authserver-z742wpzi3q-uc.a.run.app/vehicle/register",
+					"protocol": "https",
+					"host": [
+						"authserver-z742wpzi3q-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"vehicle",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

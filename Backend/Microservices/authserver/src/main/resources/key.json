@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gocarshare",
+  "private_key_id": "314f3f329e6e419732a70993bda004061e8c14c3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDedzUjB4prS8hr\nFNi0o0aFOeJ+OTsFo0K17FYTqfBu0GZDkdPDUl9PknyLRLThfJZWGkhj4uErHYeM\nguYXWXjgXktNWFaqKOleHJlztz00IZDaP8n0zMde1fToJPTqXyYfHQcNbx7kd4Vq\nLGn9oaTHu8eOzxNghg1RZbFVmK0qeDdUaSlohU5tgXxqtS/aLFWyIw7K+9t1772S\nZ9rNvy5li3UpTPR166zPeQk8WomnIqNlxfWdNNa04hV1hIar+fJOr7P7jEaFgxPJ\nbZtD6m3OPolJOVsvu1TGVMFajvKB0pI71HWAMje6k3O4t/bU/zujnx2Y4ZnPXuAp\n5AcO7uq5AgMBAAECggEAG5zTQR5R/YBiB3yGa2FqwuWM6drjqw75HEiR5I3u1GpU\njyV+EdvbDa7ie4zTILvMkzJe8tr51Nas+PFUauiFmt/JW/fPhf5e/PnyyAyh8aMK\n7jQFtrdmNay74caYibC2tBzvv6ifvn7hVezeWQdjwxDZM64bOxtYctZ6/ONe9wrK\nj7W50gpQRBNKSLzrHPTbDhW5jwox5wgK3QgyHE4EHnOZPBAS3RLhB5aelbK12q0Z\nxDkdA5rS6S9rAKDa2TIhmFOZQSnBFImLXYezZPnvBmcNPpdpxyWGsJ8UQiIVLJdv\nAXxy8xALyLC+t5qQuZ7UDrMdpWBl+7c6lhvCOSIBCQKBgQD6afdb5ARxhzIzWQ5Q\naTdui/HY3l+RqPfuQ8cj12nOGOwSfoLi1EQjwQMBkbcHZQU8XooFjR54T66EoSCV\nRB9zLTO1y/caPVg3lgjL+xLopXPcb89fDtAkBjvxDJzO73mSCOyKOJ+D1r3EUHhr\nPHM608mx3dnUn+/MPg2mWi9o/QKBgQDjbaM+HLFBZ8uBZqX7B4e22+V4rnKPSAFV\nQrrczlR7TWcL8ar2U2j/3DKE+UJrYerowcALi7nT/Gyp7R2DCSByfx6x5GYBlRwe\nfeovjGZJrzuipfA6ZFHejzrabnHOhB6Sbk8FDcrqH2R4ty8fdL8/eDKQVNvTV/Y0\nT1ZoGulDbQKBgHYaFhSbpNDaX33CKbMY/JDBpe2Pa2lqVIxmIPyxcvBF5skOK7LJ\nQ93NARrzW2w8Y8zGFbhqhw1dH0TkLVbYyzBqCDJcoQ0aE4ob08hIgPGCXvN/NEFz\n3gyveAPG3Ano/eA3H0BNVkY6uENnZHPHDd2X109w/3R9ff5I4e0sKaINAoGBANL+\nR2F7exNj+VBe7AQdc1I5ZgX1SgEV226/Tt9FaOlP4RcaqPKIZbRiFFh7a5x2Jlq0\nTbgodElwOVvYyPVlhT3UI6UEcYJsVL8RMC/WwJsBwIDgFCQIKFAjb4Vwy5K9ziMp\nxZO5vRRB9ZNs14IGbNu0ZqyynZLQW3EiXdaNiPVtAoGBAPUQqYKh9nOKhna3PsSo\nOfh1ipbKf9u4QwpcFnUfx+OgvkW/RK3SBzl9rpPPDjEzJ1Tj7BFIY5Gst1yihuDM\nHroPmM6qbm1tiup7wkXOv7oc3FM8bzNWQ94gW07VRfIyD5hDzc36UGx44u79IxOj\nJ21sErnzeeIeyIdZ/tXqec/j\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fyuda@gocarshare.iam.gserviceaccount.com",
+  "client_id": "102977944639660437156",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fyuda%40gocarshare.iam.gserviceaccount.com"
+}
