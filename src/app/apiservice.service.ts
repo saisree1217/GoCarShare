@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiserviceService {
 
-  private baseUrl = "hello.com"
+  private baseUrl = "https://authserver-z742wpzi3q-ue.a.run.app/api/auth/user/singUp"
 
   constructor(private Http: HttpClient) { }
 
@@ -17,9 +17,9 @@ export class ApiserviceService {
    return this.Http.get(endpoint);
   }
 
-  post (endpoint: string, body: any): Observable<any> {
+  post (endpoint: string, body: any, requestOptions: any ): Observable<any> {
     console.log(body)
-    return this.Http.post(endpoint, body);
+    return this.Http.post(endpoint, body,);
   }
 }
 

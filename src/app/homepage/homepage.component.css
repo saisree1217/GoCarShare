@@ -1,21 +1,33 @@
-
-body{
- display:flex;
- width: 100%;
- height: 100vh;
- flex-direction : column;
- justify-content: center;
- align-items: center;
- background: -webkit-linear-gradient(left, #7579ff, #b224ef);
-
+h5{
+  color:white;
+  text-align:center;
+}
+h4{
+  text-align:center;
+}
+.card-header{
+  background-color:black;
+}
+.nav-title{
+  padding-left: 1rem;
+}
+p{
+  margin-top:20px;
+}
+.inner-adjust
+{
+  Vertical-align:center;
+}
+span{
+  align-items: center;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 40%;
     border-radius: 5px;
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
+    margin: 0 auto; 
+    float: none; 
     flex: 0 1 24%;
   
 }

@@ -1,0 +1,122 @@
+<!-- Top navigation -->
+
+  
+  <!-- Sidebar navigation -->
+  <div class="container-fluid">
+	<div class="row">
+  
+	  <nav class="col-md-2 d-md-block bg-light sidebar">
+		<div class="sidebar-sticky">
+		  <ul class="nav flex-column">
+			<li class="nav-item">
+			  <a class="nav-link active">
+				<i class="fas fa-user"></i>User Profile
+			  </a>
+			</li>
+			<!-- Calling SignOut() Api from AuthService -->
+			<li class="nav-item">
+			  <a class="nav-link" >
+				<i class="fas fa-sign-out-alt"></i>Log out
+			  </a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" >
+				<i class="bi bi-car-front"></i>Registered Cars
+			  </a>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+		<div class="inner-adjust">
+  
+		  <div class="pt-3 pb-2 mb-3 border-bottom">
+			<h1 class="h2">User Profile</h1>
+		  </div>
+		  <!-- Show user data when logged in -->
+		  <div class="row" >
+			
+				<div class="vehicle-list">
+				<div class="card vehicle-card"  *ngFor = "let vehicle of userVehicles;let i=index" >
+					<div class="card-body" >
+					  <h5 class="card-title">Registered vehicle</h5>
+					  <p class="card-text"> Vehicle Details</p>
+					   <p>Car sub-model: {{vehicle.bodyStyle}}</p>
+						<p>Color: {{vehicle.color}}</p>
+						<p>Registered on: {{vehicle.registeredOn}}</p>
+						<p>Car model: {{vehicle.make}}</p>
+						<p>year: {{vehicle.year}}</p>	
+						<p style="cursor: pointer;" (click)="host(i)">Host</p>		
+					  </div>
+				
+				  </div>
+				<!-- <div class="card" style="width: 18rem;">
+					<div class="card-body" *ngFor = "let vehicle of userVehicles;let i=index">
+					  <h5 class="card-title">Registered Vehicles</h5>
+					    <p>{{vehicle.body_style}}</p>
+						<p>{{vehicle.color}}</p>
+						<p>{{vehicle.make}}</p>
+						<p>{{vehicle.year}}</p>			
+						<p style="cursor: pointer;" (click)="host(i)">Host</p>
+					</div>
+				</div> -->
+				<!-- <img class="align-self-start mr-5 img-thumbnail rounded-circle" > -->
+				<!-- <div class="media-body">
+				  <h1>Hello: </h1>
+				  <p>User ID: </p>
+				  <p>Email: </p>
+				 < <p>Email Verified: </p>
+				</div> -->
+			   
+			
+	  
+			</div>
+		  </div>
+	
+		  <div class="row">
+			<div class="container h-100">
+			  <div class="d-flex justify-content-center h-100">
+				
+				<div class="searchbar">
+				  <div *ngIf="!showDropdown">
+					<input class="search_input" type="text" [(ngModel)]="searchInput" name="" placeholder="Search..." (ngModelChange)="onsearchInput($event)">
+					<div class="search_icon" (click)="showDropdown = true; searchCars()"><i class="fas fa-search"></i></div>
+				  </div>
+				  <div *ngIf="showDropdown">
+					<select class="search_input">
+
+					</select>
+					<div class="search_icon" (click)="showDropdown = false"><i class="fas fa-times"></i></div>
+				  </div>
+				  <div class="car-card-container">
+					<div class="car-card" *ngFor = "let car of carsRefinedByBodyStyle;let i=index">
+						<p>{{car.body_styles}}</p>
+						<p>{{car.make}}</p>
+						<p>{{car.model}}</p>
+						<p>{{car.model_id}}</p>
+						<p>{{car.year}}</p>			
+						<p style="cursor: pointer;" (click)="register(i)">Register</p>
+						<div *ngIf="isRegisterButtonClicked && i==selectedCarIndex">
+							<p>Color</p>
+							<input type="text" [(ngModel)]="carColor" (ngModelChange)="onChangeCarColor($event)">
+							<p>Inventory Id</p>
+							<input type="text" [(ngModel)] = "carInventoryId" (ngModelChange)="onChangeCarColor($event)">
+							<p style="cursor: pointer;" (click)="submitRegistration(i)">Submit</p>
+						</div>  
+					</div>
+				</div>
+				
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<!--Hemanth-->
+  
+		</div>
+		
+	  </main>
+  
+	</div>
+  </div>
+  
+  

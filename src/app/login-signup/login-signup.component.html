@@ -16,23 +16,24 @@
   <div class="cont">
 
 
-    <input type="text" name="" id="">
+    <!-- <input type="text" name="" id=""> -->
     <form>
       <div class="form sign-in">
         <h2>Sign In</h2>
         <label>
           <span>Email Address</span>
-          <input type="email" id="email-id">
+          <input type="email" name="email-id" (keyup)="onKeySigninEmail($event)">
         </label>
         <label>
           <span>Password</span>
-          <input type="password" id="password-id" >
+          <input type="password" name="password-id"  (keyup)="onKeySigninPassword($event)">
         </label>
-        <button class="submit" type="submit" (click) = "submit()">Sign In</button>
-        <p class="forgot-pass">Forgot Password ?</p>
+        <button class="submit" type="button" (click) = "submit()">Sign In</button>
+       <!-- <p class="forgot-pass">Forgot Password ?</p>-->
         <div class="social-media"></div>
       </div>
     </form>
+
     
 
     <div class="sub-cont">

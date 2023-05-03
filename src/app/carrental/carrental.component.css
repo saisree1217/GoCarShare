@@ -1,0 +1,49 @@
+h5{
+    color:white;
+    text-align:center;
+  }
+  h4{
+    text-align:center;
+  }
+  .card-header{
+    background-color:black;
+  }
+  .nav-title{
+    padding-left: 1rem;
+  }
+  p{
+    margin-top:20px;
+  }
+  .inner-adjust
+  {
+    Vertical-align:center;
+  }
+  span{
+    align-items: center;
+  }
+  .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 40%;
+      border-radius: 5px;
+      margin: 0 auto; 
+      float: none; 
+      flex: 0 1 24%;
+    
+  }
+  .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+  img{
+      border-radius: 5px 5px 0 0;
+  }
+    
+  .container {
+      padding: 2px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+    }
+    

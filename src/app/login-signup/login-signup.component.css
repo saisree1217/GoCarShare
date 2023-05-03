@@ -14,6 +14,9 @@
     background: -webkit-linear-gradient(left, #7579ff, #b224ef);
     font-family: 'Nunito', sans-serif;
   }
+  .form.hidden {
+    display: none;
+  }
   
   input, button{
     border:none;

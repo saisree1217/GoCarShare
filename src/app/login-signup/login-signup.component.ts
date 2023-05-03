@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiserviceService } from '../apiservice.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-login-signup',
@@ -10,9 +11,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 })
 
+// class service{
+
+// }
+
 export class LoginSignupComponent implements OnInit {
+  public getJsonValue: any;
+  public postJsonValue:any;
   constructor(private router: Router
-     , private Apiservice: ApiserviceService
+     , private Apiservice: ApiserviceService,
+     private http: HttpClient
     ) {
 
   }
@@ -20,6 +28,12 @@ export class LoginSignupComponent implements OnInit {
   email: string;
   password: string;
   name:string;
+  emailsignin:string;
+  passwordsignin:string;
+  jsonvalue:any;
+  baseurl="http://34.122.10.135:80/api/auth/user/signIn?";
+  url:string;
+  idToken:any;
 
   ngOnInit(): void {
     document.querySelector('.img-btn')?.addEventListener('click', () => {
@@ -28,10 +42,23 @@ export class LoginSignupComponent implements OnInit {
      
 
     });
+    
   }
 
+
   geturl(): string {
-    return `https://authserver-z742wpzi3q-ue.a.run.app/auth/signUp`;
+    return `https://authserver-z742wpzi3q-ue.a.run.app/api/auth/user/test`;
+    
+  }
+  onKeySigninEmail($event:any)
+  {
+    this.emailsignin = $event.target.value;
+    console.log(this.emailsignin)
+  }
+  onKeySigninPassword($event:any)
+  {
+    this.passwordsignin=$event.target.value;
+    console.log(this.passwordsignin)
   }
 
   onKeyEmail($event: any){
@@ -48,40 +75,74 @@ export class LoginSignupComponent implements OnInit {
     this.password = $event.target.value;
   }
 
+
   submit(){
-  console.log(this.name+" "+this.email  + " " + this.password);
+    // alert(this.emailsignin);
+    // alert(this.passwordsignin);
+    this.url=this.baseurl + "emailId=" + this.emailsignin + "&password=" +this.passwordsignin;
+    // alert(this.url);
+    this.http.get(this.url)
+  .subscribe((response) => {
+    console.log(response);
+    this.jsonvalue=response;
+    this.idToken=this.jsonvalue.idToken;
+    localStorage.setItem('idToken', this.idToken);
+    this.router.navigate(["homepage"]);
+   
+  });
+}
 
 
-   var  body = {
-      "name" : this.name,
-      "emailId": this.email,
-      "password": this.password
-
-    }
-
-    this.Apiservice.post(this.geturl(), body).subscribe(data => {
-      console.log(data)
-    })
-    this.router.navigate(["homepage"])
-  }
   signup(){
-    console.log(this.name+" "+this.email  + " " + this.password);
-
-
-   var  body = {
-      "name" : this.name,
-      "emailId": this.email,
-      "password": this.password
+    const headerdict={
+      contentType : 'application/json'
+    }
+    const requestOptions = {                                                                                                                                                                                 
+      headers: new HttpHeaders(
+        headerdict
+      ), 
+    };
+    // const header= new HttpHeaders({
+    //   contentType : 'application/json'
+    // })
+    var  body = {
+      "displayName" : "Hemanth",
+      "emailId": "he"+new Date().getTime()+"@gmail.com",
+      "password": "1234567"
 
     }
 
-    this.Apiservice.post(this.geturl(), body).subscribe(data => {
-      console.log(data)
-    })
+   
+    
+      fetch('http://34.122.10.135:80/api/auth/user/signUp', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body:
+              JSON.stringify({
+                  emailId: this.email,
+                  password: this.password,
+                  displayName: this.name
+              })
+      })
+          .then(response => response.json())
+          .then(data =>{
+            console.log(data)
+            alert("User successfully signed up!,You can now sign in ")
+          } 
+          )
+          .catch(error => console.error(error));
+
+    // this.http.post(this.baseUrl+'/api/auth/user/signUp',body,requestOptions).subscribe((data) => {
+    // console.log(data)
+    }
+    
+   
     
 
   }
 
 
   
-}
+
